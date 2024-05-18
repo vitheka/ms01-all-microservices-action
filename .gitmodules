@@ -1,0 +1,12 @@
+[submodule "ms01-api-gateway"]
+	path = ms01-api-gateway
+	url = https://github.com/vitheka/ms01-api-gateway.git
+[submodule "ms01-book-service"]
+	path = ms01-book-service
+	url = https://github.com/vitheka/ms01-book-service.git
+[submodule "ms01-cambio-service"]
+	path = ms01-cambio-service
+	url = https://github.com/vitheka/ms01-cambio-service.git
+[submodule "ms01-naming-server"]
+	path = ms01-naming-server
+	url = https://github.com/vitheka/ms01-naming-server.git
