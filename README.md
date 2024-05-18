@@ -1,0 +1,1 @@
+[![Continuos Integration with GitHub](https://github.com/vitheka/ms01-all-microservices-action/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/vitheka/ms01-all-microservices-action/actions/workflows/docker-publish.yml)
