@@ -37,6 +37,6 @@ jobs:
           distribution: 'adopt'
 
       - name: Eureka Naming Service Container Image
-        working-directory: ./ms01-naming-server
+        working-directory: ./ms01-naming-server @ 4310106
         run: mvn spring-boot:build-image
         
