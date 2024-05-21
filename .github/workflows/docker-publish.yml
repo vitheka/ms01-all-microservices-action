@@ -36,7 +36,10 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Submodule Init
+        run: git submodule update --init --recursive
+
       - name: Eureka Naming Service Container Image
-        working-directory: ./ms01-naming-server @ 4310106
+        working-directory: ./ms01-naming-server 
         run: mvn spring-boot:build-image
         
