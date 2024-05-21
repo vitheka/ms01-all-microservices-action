@@ -22,8 +22,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Install the cosign tool except on PR
-      # https://github.com/sigstore/cosign-installer
       - name: Login DockerHub
         uses: docker/login-action@v3.1.0
         with:
@@ -39,7 +37,23 @@ jobs:
       - name: Submodule Init
         run: git submodule update --init --recursive
 
-      - name: Eureka Naming Service Container Image
+      - name: Build Eureka Naming Service Container Image
         working-directory: ./ms01-naming-server 
         run: mvn spring-boot:build-image
+
+      - name: Build API Gateway Container Image
+        working-directory: ./ms01-api-gateway 
+        run: mvn spring-boot:build-image
+
+      - name: Build Cambio Microservice Jar
+        working-directory: ./ms01-cambio-service
+        run: mvn clean package
+
+      - name: Build Book Microservice Jar
+        working-directory: ./ms01-book-service
+        run: mvn clean package
+
+      - name: Docker Compose Build
+        working-directory: ./
+        run: docker-compose build
         
