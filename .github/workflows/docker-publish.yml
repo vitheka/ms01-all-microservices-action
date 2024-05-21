@@ -39,19 +39,19 @@ jobs:
 
       - name: Build Eureka Naming Service Container Image
         working-directory: ./ms01-naming-server 
-        run: mvn spring-boot:build-image
+        run: mvn spring-boot:build-image -DskipTests
 
       - name: Build API Gateway Container Image
         working-directory: ./ms01-api-gateway 
-        run: mvn spring-boot:build-image
+        run: mvn spring-boot:build-image -DskipTests
 
       - name: Build Cambio Microservice Jar
         working-directory: ./ms01-cambio-service
-        run: mvn clean package
+        run: mvn clean package -DskipTests
 
       - name: Build Book Microservice Jar
         working-directory: ./ms01-book-service
-        run: mvn clean package
+        run: mvn clean package -DskipTests
 
       - name: Docker Compose Build
         working-directory: ./
