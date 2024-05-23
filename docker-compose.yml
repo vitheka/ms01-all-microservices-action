@@ -82,7 +82,7 @@ services:
       - vitor-network
 
   cambio-service:
-    image: cambio-service
+    image: vitheka/cambio-service
     restart: always
     build:
       context: .
@@ -110,7 +110,7 @@ services:
       - vitor-network
       
   book-service:
-    image: book-service
+    image: vitheka/book-service
     restart: always
     build:
       context: .
