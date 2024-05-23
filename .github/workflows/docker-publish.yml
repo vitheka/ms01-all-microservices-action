@@ -57,3 +57,8 @@ jobs:
         working-directory: ./
         run: docker-compose build
 
+      - name: Push to Docker Hub Container Registry  
+        run: |
+          docker tag ${{ secrets.DOCKER_USERNAME }}/naming-server:0.0.1-SNAPSHOT ${{ secrets.DOCKER_USERNAME }}/naming-server:${{github.run_id}}
+          docker push ${{ secrets.DOCKER_USERNAME }}/naming-server:${{github.run_id}}
+
