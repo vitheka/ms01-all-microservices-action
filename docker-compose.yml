@@ -66,7 +66,7 @@ services:
       - vitor-network
 
   api-gateway:
-    image: docker.io/library/ms01-api-gateway:0.0.1-SNAPSHOT
+    image: docker.io/vitheka/ms01-api-gateway:0.0.1-SNAPSHOT
     ports:
       - 8765:8765
     depends_on:
